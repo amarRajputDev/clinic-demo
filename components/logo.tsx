@@ -30,10 +30,12 @@ export function Logo({
   className,
   markClassName,
   compact = false,
+  overline,
 }: {
   className?: string;
   markClassName?: string;
   compact?: boolean;
+  overline?: string;
 }) {
   return (
     <span
@@ -44,6 +46,11 @@ export function Logo({
     >
       <ToothMark className={cn("shrink-0", markClassName)} />
       <span className="flex flex-col leading-none">
+        {overline ? (
+          <span className="mb-1.5 text-[0.5rem] font-semibold uppercase leading-none tracking-[0.28em] text-charcoal-soft/75">
+            {overline}
+          </span>
+        ) : null}
         <span className="font-display text-[1.15rem] leading-none tracking-[0.02em] sm:text-[1.3rem]">
           AUREL
           <span className="opacity-55"> DENTAL</span>

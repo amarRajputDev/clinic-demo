@@ -110,7 +110,7 @@ export function SiteHeader() {
             className="shrink-0"
             onClick={closeDrawer}
           >
-            <Logo compact={scrolled} />
+            <Logo compact={scrolled} overline="Product by Agentiva" />
           </Link>
 
           <nav
