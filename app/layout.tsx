@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { DM_Serif_Display, Manrope } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { MobileBookBar } from "@/components/mobile-book-bar";
@@ -90,6 +91,7 @@ export default function RootLayout({
         </div>
         <MobileBookBar />
         <div className="grain" aria-hidden="true" />
+        <Analytics />
       </body>
     </html>
   );
